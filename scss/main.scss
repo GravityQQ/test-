@@ -1,0 +1,61 @@
+/*-----main------*/
+.filter {
+padding-top: 200px;
+// .filter__nav
+
+	&__nav {
+		display: flex;
+		flex-wrap: wrap;
+		gap: rem(16);
+		margin-bottom: rem(42);
+	}
+
+	// .filter__type
+
+	&__type {
+			padding: rem(12) rem(20);
+	background-color: #6fb667;
+
+	&.active,&:hover
+	 {
+		background-color: rgb(188, 129, 248);
+	}
+	}
+
+	// .filter__body
+
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(em(280), 1fr));
+	}
+
+	// .filter__item
+
+	&__item {
+	
+	}
+
+	// .filter__img
+
+	&__img {}
+}
+
+
+
+.button {
+
+}
+
+.active {
+
+}
+[data-item].filter__item:nth-child(1) {
+	transition-delay: .7s;
+
+}
+[data-item].filter__item:nth-child(2) {
+	transition-delay: .9s;
+}
+[data-item].filter__item:nth-child(3) {
+	transition-delay: 1s;
+}

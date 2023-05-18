@@ -1,0 +1,63 @@
+// для шривта через плагін &display=swap
+/* -------------------------- */
+//background: url(../img/about.svg) 0 0 no-repeat;
+$mainFamily: CorporateA;
+$widthContainer: 1230px;
+$mainFontWeigth: 400;
+$mainColor: #262626;
+$mainSize: 16px;
+$mainLineHeigth: 1.5;
+
+@mixin titleMix ($family, $col, $fs, $lh, ) {
+	font-family: $family;
+	color: $col;
+	font-size: $fs;
+	line-height: $lh;
+
+}
+
+// брек поінти
+$ps: $widthContainer;
+$tablet: 991.98px;
+$mobile: 767.98px;
+$mobileSmall: 479.98px;
+
+
+body {
+	font-size: $mainSize;
+	line-height: $mainLineHeigth;
+	font-family: $mainFamily;
+	font-weight: $mainFontWeigth;
+	color: $mainColor;
+	background-color: #81939a;
+}
+
+.wrapper {
+	overflow: clip;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.page {
+	flex: 1 1 auto;
+}
+
+[class*="__container"] {
+	max-width: $widthContainer;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+[data-item] {
+	transform: translate(0, rem(50));
+	opacity: 0;
+	transition: all .8s;
+}
+
+[data-item].active {
+	transform: translate(0, 0);
+	opacity: 1;
+}
+
+// ------------------
